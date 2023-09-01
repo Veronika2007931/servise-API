@@ -18,6 +18,7 @@
     "url": "https://github.com/Veronika2007931/servise-API/issues"
   },
   "dependencies": {
+    "lodash.debounce": "^4.0.8",
     "modern-normalize": "^1.1.0",
     "parcel-bundler": "^1.12.5",
     "parcel-transformer-hbs": "^1.0.4"
