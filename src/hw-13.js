@@ -1,6 +1,12 @@
 
 import debounce from "lodash.debounce"
 import {fetchCountries} from "./fetchCountries"
+import { error } from '@pnotify/core'; 
+import '@pnotify/core/dist/BrightTheme.css';
+
+ 
+
+
 const box = document.querySelector(".js-box")
 const list = document.querySelector(".list")
 
@@ -35,7 +41,10 @@ function onSearchQuery(event){
            }).join(" ")
               list.innerHTML = listCantries
         }else{
-            alert("Too many results")
+            PNotify.error({
+                title: 'Oh No!',
+                text: 'Something terrible happened.'
+              });
         }
     })
 }
