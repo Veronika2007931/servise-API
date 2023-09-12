@@ -1,7 +1,7 @@
 
 import debounce from "lodash.debounce"
 import {fetchCountries} from "./fetchCountries"
-import { error } from '@pnotify/core'; 
+import {error} from '@pnotify/core'; 
 import '@pnotify/core/dist/BrightTheme.css';
 
  
@@ -41,12 +41,11 @@ function onSearchQuery(event){
            }).join(" ")
               list.innerHTML = listCantries
         }else{
-            PNotify.error({
+           error({
                 title: 'Oh No!',
                 text: 'Something terrible happened.'
               });
         }
     })
 }
-
 
